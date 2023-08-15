@@ -96,8 +96,21 @@ header h1 {
 }
 
 
+.container .row > [class^='col-'] {
+  padding: 0;
+}
 
+.container figure {
+  margin: 0;
+  padding: 0;
+}
 
+.container img {
+  margin: 0;
+  padding: 0;
+  display: block;
+  
+}
 
 
 
