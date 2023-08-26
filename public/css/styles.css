@@ -10,7 +10,14 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
+ .img-fluid1 {
+  max-width: 322px;
+  height: 429px;
+}
+.img-fluid2 {
+  max-width: 328px;
+  height: 217px;
+}
 
 /* 위로 가기 버튼 스타일 */
 #backToTopBtn {
@@ -93,7 +100,9 @@ header h1 {
   color: #fff;  /* 버튼 텍스트 색상 */
   border-radius: 4px;  /* 모서리 둥글게 */
   text-decoration: none;  /* 밑줄 제거 */
+  
 }
+
 
 
 .container .row > [class^='col-'] {
