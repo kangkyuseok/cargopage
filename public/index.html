@@ -21,7 +21,7 @@
 
     <style>
     .bg-image-cargo {
-    background-image: url('img/cargo_main.png');
+    background-image: url('img/ks2300.png');
     background-size: cover;
     background-position: center;
 }
@@ -35,6 +35,7 @@
         padding:0;
         height: 30%;
     }
+}
     /* 모바일 디바이스에 대한 미디어 쿼리 */
 @media (max-width: 768px) {
     #mapContainer {
@@ -42,6 +43,23 @@
     }
 }
 
+@media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 24px;  /* 글씨 크기 변경 */
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            .header-content p {
+                font-size: 12px;  /* 글씨 크기 변경 */
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            .header-content {
+                text-align: center;  /* 텍스트를 중앙으로 이동 */
+                padding: 10px;  /* 패딩 추가 */
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+        }
     </style>
 </head>
 
@@ -59,9 +77,9 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">홈</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pages/about.html">회사소개</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pages/contact.html">오시는 길</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pages/gallery.html">갤러리</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/about.html">보유장비</a></li>
+                    
+                    <li class="nav-item"><a class="nav-link" href="/pages/gallery.html">시공사례</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://open.kakao.com/o/gcoliNAf">
                             <i class="fab fa-kakao"></i> 카카오톡 연결
@@ -69,7 +87,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="tel:01023779159">
-                            <i class="fas fa-phone"></i> 전화 연결
+                            <!-- <i class="fas fa-phone"></i> 전화 연결 --> 전화연결
                         </a>
                     </li>
                 </ul>
@@ -78,7 +96,7 @@
     </nav>
     <!-- Header - set the background image for the header in the line below-->
     <header class="py-5  bg-image-full bg-image-cargo">
-        <div class="header-content">
+        <div class="header-content" style="color: black; background-color: rgba(255, 255, 255, 0.5);" >
             <h1>부천, 인천<br>카고크레인 전문업체</h1>
 
             
@@ -105,15 +123,15 @@
                     <h2
                         style="font-size: 30px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
                         보유장비</h2>
-                    <p>KS2300 , KS2307T 모델</p>
-                    <a href="#" class="equipment-btn">보유장비</a>
+                    <p>KS2300 , KS2307T</p>
+                    <a href="/pages/about.html" class="equipment-btn">보유장비</a>
                 </div>
             </div>
 
             <div class="col-6 col-md-3 item-container22 p-0">
                 <div class="img-wrapper22">
                     <a href="#!">
-                        <img style="width: 290px; height: 200px;" class="img-fluid" src="img/boardimg/test1.png" alt="">
+                        <img class="img-fluid" src="img/boardimg/사업소개.png" alt="">
                     </a>
                 </div>
                 <div class="text-wrapper22">
@@ -121,6 +139,7 @@
                         style="font-size: 30px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
                         시공사례</h2>
                     <p>시공 사례 입니다.</p>
+                    <a href="/pages/gallery.html" class="equipment-btn">시공사례</a>
                 </div>
             </div>
 
@@ -135,8 +154,8 @@
                         style="font-size: 30px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
                         전화문의</h2>
                     <p><a class="nav-link" href="tel:01053303399">
-                            010-5330-3399 <br> 번호 클릭시 연결됩니다.
-                        </a></p>
+                            010-5330-3399 <br> 전화상담 가능합니다.</p>
+                        </a><a  class="equipment-btn">전화연결</a>
                 </div>
             </div>
 
@@ -150,7 +169,10 @@
                     <h2
                         style="font-size: 30px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
                         견적문의</h2>
-                    <p>카카오톡 혹은 전화로 <br>문의주시면신속하게 <br> 안내드리겠습니다.</p>
+                           <p>카카오로 글을 남겨주세요.</p>
+                           <a class="equipment-btn" href="https://open.kakao.com/o/gcoliNAf">
+                            카카오 연결</a>
+                        
                 </div>
             </div>
         </div>
@@ -181,33 +203,33 @@
             <div class="container">
                 <div class="row">
                     <!-- 1행 -->
-                    <div class="col-6 col-md-3 p-0">
+                    <div class="col-6 col-md-3 p-1">
                         <figure>
                             <img width="400" height="300" src="img/main2/1.jpg" alt="" class="img-fluid">
                         </figure>
                     </div>
-                    <div class="col-6 col-md-3 p-0">
+                    <div class="col-6 col-md-3 p-1">
                         <figure>
                             <img width="400" height="300" src="img/main2/2.jpg" alt="" class="img-fluid">
                         </figure>
                     </div>
-                    <div class="col-6 col-md-3 p-0">
+                    <div class="col-6 col-md-3 p-1">
                         <figure>
                             <img width="400" height="300" src="img/main2/3.jpg" alt="" class="img-fluid">
                         </figure>
                     </div>
-                    <div class="col-6 col-md-3 p-0">
+                    <div class="col-6 col-md-3 p-1">
                         <figure>
                             <img width="400" height="300" src="img/main2/4.jpg" alt="" class="img-fluid">
                         </figure>
                     </div>
                     <!-- 2행 -->
-                    <div class="col-6 col-md-3 p-0   ">
+                    <div class="col-6 col-md-3 p-1">
                         <figure>
                             <img width="400" height="300" src="img/main2/5.jpg" alt="" class="img-fluid">
                         </figure>
                     </div>
-                    <div class="col-6 col-md-3 p-0">
+                    <div class="col-6 col-md-3 p-1">
                         <figure>
                             <img width="400" height="300" src="img/main2/a.jpg" alt="" class="img-fluid">
                         </figure>
@@ -381,11 +403,10 @@
     </a> -->
         </div>
         <!-- Footer-->
-        <footer class="py-5 bg-secondary">
+        <footer class="py-2 bg-secondary">
 
             <div class="container">
-                <p class="m-0 text-left text-white">대표 : 강규석　사업자번호 : 123-12-12345 </p>
-                <p class="m-0 text-left text-white">대표전화 : 010-5330-3399　주소 : 서울시 강남구 테헤란로 20길 </p>
+                
                 <p class="m-0 text-center text-white">Copyright &copy; 2023 카고 크레인</p>
             </div>
         </footer>
