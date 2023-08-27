@@ -1,7 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './custom.css';
 
 function App() {
+  useEffect(() => {
+    const button = document.getElementById("emailInquiryButton");
+    button.addEventListener("click", function() {
+      const targetId = "emailcontactus";
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: "smooth"
+        });
+      }
+    });
+    
+    // Cleanup
+    return () => {
+      if (button) {
+        button.removeEventListener("click", function() {/* your function here */});
+      }
+    }
+  }, []);
+
+  const [formData, setFormData] = useState({
+    category: 'general',
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // 서버로 formData 전송 로직
+  };
   return (
     <div className="App">
       <div className="container">
@@ -50,7 +88,7 @@ function App() {
             </div>
             <div className="text-wrapper22 white-bg22">
               <h2 style={{ fontSize: '30px', fontFamily: "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" }}>견적문의</h2>
-              <p>카카오 상담하기</p>
+              <p id="emailInquiryButton" className="equipment-btn">이메일 문의</p>
               <a href="/pages/about.html" className="equipment-btn">카카오연결</a>
             </div>
           </div>
@@ -102,7 +140,19 @@ function App() {
           </div>
         </div>
       </section>
-
+      <div className="contact-form" id="emailcontactus">
+      <form onSubmit={handleSubmit}>
+        <select name="category" onChange={handleInputChange}>
+          <option value="general">이메일 문의</option>
+          
+        </select>
+        <input type="text" name="name" placeholder="이름" required onChange={handleInputChange} />
+        <input type="email" name="email" placeholder="이메일" required onChange={handleInputChange} />
+        <input type="text" name="phone" placeholder="전화번호" onChange={handleInputChange} />
+        <textarea name="message" placeholder="내용" rows="4" required onChange={handleInputChange}></textarea>
+        <button type="submit">문의 보내기</button>
+      </form>
+    </div>
       <section className="container">
         <div className="row">
           <h1 className="text-center">주소</h1>
@@ -128,9 +178,11 @@ function App() {
             </a>
           </div>
         </div>
+       
       </section>
+      
     </div>
-
+  
   );
 }
 
