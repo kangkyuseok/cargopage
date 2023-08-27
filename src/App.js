@@ -144,11 +144,12 @@ function App() {
       <form onSubmit={handleSubmit}>
         <select name="category" onChange={handleInputChange}>
           <option value="general">이메일 문의</option>
-          
         </select>
         <input type="text" name="name" placeholder="이름" required onChange={handleInputChange} />
         <input type="email" name="email" placeholder="이메일" required onChange={handleInputChange} />
         <input type="text" name="phone" placeholder="전화번호" onChange={handleInputChange} />
+        <input type="date" name="date" required onChange={handleInputChange} />
+        <input type="time" name="time" required onChange={handleInputChange} />
         <textarea name="message" placeholder="내용" rows="4" required onChange={handleInputChange}></textarea>
         <button type="submit">문의 보내기</button>
       </form>

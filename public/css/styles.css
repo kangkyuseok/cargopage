@@ -10,6 +10,68 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+/* 메인 배경 화면 css */
+.bg-image-cargo {
+    background-image: url('/public/img/ks2300.png');
+    background-size: cover;
+    background-position: center;
+    height: 1000px; 
+}
+
+@media (max-width: 768px) {
+    .bg-image-cargo {
+        background-image: url('/public/img/ks2300.png');
+        
+        background-position: center;
+        height: 300px; /* !important를 제거했습니다 */
+        margin: 0;
+        padding: 0;
+    }
+}
+
+    /* 모바일 디바이스에 대한 미디어 쿼리 */
+@media (max-width: 768px) {
+    #mapContainer {
+        height: 220px; /* 높이를 두 배로 */
+    }
+}
+
+@media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 24px;  /* 글씨 크기 변경 */
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            .header-content p {
+                font-size: 12px;  /* 글씨 크기 변경 */
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            .header-content {
+                text-align: center;  /* 텍스트를 중앙으로 이동 */
+                padding: 10px;  /* 패딩 추가 */
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+        }
+        .img-fluid {
+  width: 432px;
+  height: 325px;
+  object-fit: cover;
+  margin: auto;  /* 중앙 정렬을 위해 추가 */
+}
+
+figure {
+  text-align: center; /* 이미지를 중앙으로 정렬 */
+}
+
+@media (max-width: 768px) {
+  .img-fluid {
+    width: 115px;
+    height: 100px;
+    object-fit: cover;
+    margin: auto;  /* 중앙 정렬을 위해 추가 */
+  }
+}
  .img-fluid1 {
   max-width: 322px;
   height: 429px;
@@ -121,6 +183,95 @@ header h1 {
   
 }
 
+.modal {
+  
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.close-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+
+/* 기본 스타일 (PC) */
+.contact-form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #aaa;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form select,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* 모바일 버전 */
+@media only screen and (max-width: 600px) {
+  .contact-form {
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+  }
+  
+  .contact-form select,
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+      margin-bottom: 10px;
+      padding: 8px;
+  }
+}
 
 
 :root {
@@ -10935,11 +11086,3 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/* .bg-image-full {
-  width: 100%;
-  height: 80%;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
-} */
