@@ -10,6 +10,67 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+/* 메인 배경 화면 css */
+.bg-image-cargo {
+    background-image: url('/public/img/ks2300.png');
+    background-size: cover;
+    background-position: center;
+    height: 1000px; /* min-height를 height로 변경했습니다 */
+}
+
+@media (max-width: 768px) {
+    .bg-image-cargo {
+        background-image: url('/public/img/ks2300.png');
+        background-size: contain;
+        background-position: center;
+        height: 300px !important; /* 우선순위를 높이기 위해 !important를 추가했습니다 */
+        margin: 0;
+        padding: 0;
+    }
+}
+    /* 모바일 디바이스에 대한 미디어 쿼리 */
+@media (max-width: 768px) {
+    #mapContainer {
+        height: 220px; /* 높이를 두 배로 */
+    }
+}
+
+@media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 24px;  /* 글씨 크기 변경 */
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            .header-content p {
+                font-size: 12px;  /* 글씨 크기 변경 */
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            .header-content {
+                text-align: center;  /* 텍스트를 중앙으로 이동 */
+                padding: 10px;  /* 패딩 추가 */
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+        }
+        .img-fluid {
+  width: 432px;
+  height: 325px;
+  object-fit: cover;
+  margin: auto;  /* 중앙 정렬을 위해 추가 */
+}
+
+figure {
+  text-align: center; /* 이미지를 중앙으로 정렬 */
+}
+
+@media (max-width: 768px) {
+  .img-fluid {
+    width: 115px;
+    height: 100px;
+    object-fit: cover;
+    margin: auto;  /* 중앙 정렬을 위해 추가 */
+  }
+}
  .img-fluid1 {
   max-width: 322px;
   height: 429px;
@@ -10935,11 +10996,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/* .bg-image-full {
+.bg-image-full {
   width: 100%;
   height: 80%;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
-} */
+}
