@@ -15,19 +15,20 @@
     background-image: url('/public/img/ks2300.png');
     background-size: cover;
     background-position: center;
-    height: 1000px; /* min-height를 height로 변경했습니다 */
+    height: 1000px; 
 }
 
 @media (max-width: 768px) {
     .bg-image-cargo {
         background-image: url('/public/img/ks2300.png');
-        background-size: contain;
+        
         background-position: center;
-        height: 300px !important; /* 우선순위를 높이기 위해 !important를 추가했습니다 */
+        height: 300px; /* !important를 제거했습니다 */
         margin: 0;
         padding: 0;
     }
 }
+
     /* 모바일 디바이스에 대한 미디어 쿼리 */
 @media (max-width: 768px) {
     #mapContainer {
@@ -10995,12 +10996,4 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}
-.bg-image-full {
-  width: 100%;
-  height: 80%;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
 }
